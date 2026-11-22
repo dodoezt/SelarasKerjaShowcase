@@ -1,16 +1,43 @@
 ---
+import "../styles/global.css";
+const shots = [
+  { n: "01", title: "Lihat kecocokan sejak awal", copy: "Setiap lowongan menunjukkan berapa kebutuhan akomodasimu yang tersedia.", image: "/img/hero-home.webp", alt: "Visual halaman utama SelarasKerja" },
+  { n: "02", title: "Kenali fasilitasnya", copy: "Periksa fasilitas yang terpenuhi sebelum memutuskan untuk melamar.", image: "/img/work.webp", alt: "Dua orang bekerja bersama di depan komputer" },
+  { n: "03", title: "Bangun proses yang inklusif", copy: "Perusahaan dapat menampilkan dukungan dan mengelola pelamar dalam satu portal.", image: "/img/opd.webp", alt: "Pertemuan komunitas membahas akses kerja" },
+];
+const features = ["Skor kecocokan kebutuhan dan fasilitas", "Detail fasilitas di setiap lowongan", "Profil pelamar dan unggah CV", "Dashboard perusahaan dan status lamaran"];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1226aa" />
+    <meta name="description" content="SelarasKerja mempertemukan pencari kerja dengan lowongan yang memahami kebutuhan akomodasi mereka." />
+    <title>SelarasKerja — Kerja inklusif dimulai dari informasi yang jelas</title>
+  </head>
+  <body>
+    <header class="topbar"><a class="brand" href="#awal" aria-label="SelarasKerja, kembali ke awal"><span class="brand-mark">✳</span><span>Selaras<span>Kerja</span></span></a><nav><a href="#cerita">Cerita</a><a href="#fitur">Fitur</a><a href="#tim">Tim</a></nav><a class="top-cta" href="#fitur">Lihat proyek <span>↗</span></a></header>
+    <main id="awal">
+      <section class="hero slide" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span class="pulse"></span> PROJECT SHOWCASE · 2026</p><h1 id="hero-title">Kerja inklusif<br />dimulai dari <em>informasi</em><br />yang jelas.</h1><p class="hero-lead">Mempertemukan kebutuhan akomodasi pencari kerja dengan fasilitas perusahaan—sebelum tombol lamar ditekan.</p><a class="button" href="#cerita">Jelajahi ceritanya <span>↓</span></a><div class="hero-meta"><span>PORTAL KERJA INKLUSIF</span><span>SDG 8 · SDG 10</span></div></div>
+        <div class="hero-art"><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="hero-photo"><img src="/img/hero-home.webp" alt="Visual kampanye inklusi kerja SelarasKerja" /></div><div class="match-card"><div class="match-top"><span class="match-dot"></span> SKOR KECOCOKAN</div><strong>3<span>/4</span></strong><p>kebutuhanmu terpenuhi</p><div class="match-bars"><i></i><i></i><i></i><i class="off"></i></div></div><div class="sticker">AKSES<br />UNTUK<br />SEMUA</div><span class="hero-caption">Cocok X dari Y kebutuhanmu</span></div>
+        <div class="hero-bottom"><span>SWIPE / SCROLL UNTUK MELIHAT</span><span>01 — 07</span></div>
+      </section>
+
+      <section class="problem slide" id="cerita"><div class="section-index">01 / LATAR BELAKANG</div><div class="problem-layout"><div><p class="eyebrow">MASALAH YANG NYATA</p><h2>Melamar kerja<br />seharusnya tak<br /><em>menjadi tebak-tebakan.</em></h2></div><div class="problem-note"><span class="quote-mark">“</span><p>Apakah tempat kerjanya punya akses kursi roda? Apakah tersedia teks besar atau juru bahasa isyarat?</p><p class="muted">Informasi akomodasi jarang terlihat di lowongan. Pelamar baru mengetahui jawabannya setelah proses berjalan jauh.</p><div class="note-rule"><span>INFORMASI TERLAMBAT</span><span>WAKTU TERBUANG</span></div></div></div><div class="problem-strip"><span>KEBUTUHAN PELAMAR</span><b>×</b><span>INFORMASI FASILITAS YANG TERBATAS</span><b>→</b><strong>KESEMPATAN YANG TAK SETARA</strong></div></section>
+
+      <section class="solution slide"><div class="section-index">02 / SOLUSI</div><div class="solution-grid"><div class="solution-main"><p class="eyebrow">KENALAN DENGAN SELARASKERJA</p><h2>Lebih tahu.<br /><em>Lebih yakin.</em><br />Baru melamar.</h2><p>Portal lowongan yang memperlihatkan kecocokan kebutuhan akomodasi dengan fasilitas perusahaan secara terbuka.</p></div><div class="solution-visual"><div class="phone"><div class="phone-head"><span>SelarasKerja</span><span>☰</span></div><div class="phone-kicker">LOWONGAN UNTUKMU</div><div class="job-title">Admin Data<br /><small>PT Cahaya Nusantara · Purwokerto</small></div><div class="score-box"><div><b>3 dari 4</b><small>kebutuhan cocok</small></div><span>75%</span></div><div class="phone-line"></div><div class="facility"><span>✓</span> Akses kursi roda</div><div class="facility"><span>✓</span> Toilet aksesibel</div><div class="facility no"><span>×</span> Juru bahasa isyarat</div><button>LIHAT DETAIL&nbsp; ↗</button></div><div class="visual-label">CONTOH TAMPILAN FITUR · SKOR KECocokan</div></div></div><div class="benefits"><div><b>01</b><span>Transparansi<br />sebelum melamar</span></div><div><b>02</b><span>Waktu pencarian<br />lebih terarah</span></div><div><b>03</b><span>Fasilitas inklusif<br />lebih terlihat</span></div></div></section>
+
+      <section class="features slide" id="fitur"><div class="section-index">03 / FITUR UNGGULAN</div><div class="feature-heading"><div><p class="eyebrow">DARI PROFIL SAMPAI LAMARAN</p><h2>Dirancang untuk<br /><em>dua sisi.</em></h2></div><p>Satu alur yang membantu pencari kerja menemukan tempat yang sesuai dan perusahaan menyampaikan dukungan yang tersedia.</p></div><div class="feature-list">{features.map((f, i) => <div class="feature-row"><span class="feature-no">0{i + 1}</span><h3>{f}</h3><span class="feature-arrow">↗</span></div>)}</div><div class="feature-photo"><img src="/img/carrusel-1.webp" alt="Cerita tentang kesempatan kerja dan inklusi" /><div><span>FOKUS PADA KECocokan</span><strong>Bukan sekadar<br />mencari lowongan.</strong></div></div></section>
+
+      <section class="screens slide"><div class="section-index">04 / TAMPILAN APLIKASI</div><div class="screen-title"><p class="eyebrow">SELARASKERJA DI DALAM LAYAR</p><h2>Informasi yang terasa<br /><em>lebih dekat.</em></h2></div><div class="screen-grid">{shots.map((s, i) => <figure class={`screen-card screen-${i + 1}`}><div class="screen-frame"><div class="browser-bar"><span></span><span></span><span></span><small>selaraskerja.id</small></div><img src={s.image} alt={s.alt} /></div><figcaption><b>{s.n}</b><div><strong>{s.title}</strong><p>{s.copy}</p></div></figcaption></figure>)}</div><p class="image-note">Foto dan aset visual menggunakan materi yang tersedia pada website SelarasKerja.</p></section>
+
+      <section class="journey slide"><div class="section-index">05 / ALUR PENGGUNA</div><div class="journey-layout"><div><p class="eyebrow">SESEDERHANA ITU</p><h2>Dari kebutuhan<br />menuju <em>kesempatan.</em></h2><p class="journey-copy">Pelamar memilih kebutuhan sekali. Selanjutnya, kecocokan tampil di tiap lowongan.</p></div><div class="steps"><div><span>01</span><b>Isi profil & kebutuhan</b><small>Pilih akomodasi yang kamu perlukan.</small></div><div><span>02</span><b>Jelajahi lowongan</b><small>Bandingkan skor dan fasilitasnya.</small></div><div><span>03</span><b>Lamar dengan yakin</b><small>Pantau status lamaran di satu tempat.</small></div></div></div><div class="journey-image"><img src="/img/work.webp" alt="Rekan kerja berkolaborasi dalam lingkungan kerja" /><span>AKSESIBILITAS ADALAH BAGIAN DARI KESEMPATAN.</span></div></section>
+
+      <section class="team slide" id="tim"><div class="section-index">06 / ORANG DI BALIK PROYEK</div><p class="eyebrow">TIM PENGEMBANG</p><h2>Dibuat bersama,<br /><em>untuk lebih banyak orang.</em></h2><div class="team-grid"><article><div class="avatar avatar-blue"><span>01</span><b>?</b></div><p>ANGGOTA 01</p><h3>Nama anggota</h3><small>Peran / kontribusi</small></article><article><div class="avatar avatar-pink"><span>02</span><b>?</b></div><p>ANGGOTA 02</p><h3>Nama anggota</h3><small>Peran / kontribusi</small></article><article><div class="avatar avatar-yellow"><span>03</span><b>?</b></div><p>ANGGOTA 03</p><h3>Nama anggota</h3><small>Peran / kontribusi</small></article></div><p class="placeholder-note">Placeholder nama dan peran tim — ganti dengan data anggota sebenarnya.</p></section>
+
+      <section class="sdg slide"><div class="section-index">07 / DAMPAK YANG DITUJU</div><div class="sdg-head"><div><p class="eyebrow">SELARAS DENGAN SDGs</p><h2>Kesempatan kerja<br /><em>yang lebih setara.</em></h2></div><p>SelarasKerja mendukung akses kerja yang layak dan partisipasi ekonomi yang inklusif.</p></div><div class="sdg-cards"><article class="sdg-card sdg-eight"><div><span>SDG</span><b>8</b></div><h3>Pekerjaan Layak<br />dan Pertumbuhan Ekonomi</h3><p>Mendukung akses menuju pekerjaan yang produktif dan layak bagi semua.</p><span class="sdg-target">TARGET 8.5</span></article><article class="sdg-card sdg-ten"><div><span>SDG</span><b>10</b></div><h3>Berkurangnya<br />Kesenjangan</h3><p>Mendorong inklusi sosial dan ekonomi tanpa memandang kondisi seseorang.</p><span class="sdg-target">TARGET 10.2</span></article></div><footer class="closing"><div class="brand brand-footer"><span class="brand-mark">✳</span><span>Selaras<span>Kerja</span></span></div><p>Informasi yang tepat.<br /><strong>Kesempatan yang lebih setara.</strong></p><span class="closing-stamp">KERJA<br />INKLUSIF<br />UNTUK SEMUA</span></footer></section>
+    </main>
+  </body>
 </html>
