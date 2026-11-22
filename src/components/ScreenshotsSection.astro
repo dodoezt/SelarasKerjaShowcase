@@ -1,0 +1,36 @@
+---
+import { screenshots } from "../data/showcase";
+---
+
+<section class="screens slide" aria-labelledby="screens-title">
+  <div class="section-index">04 / TAMPILAN APLIKASI</div>
+  <div class="screen-title">
+    <p class="eyebrow">SELARASKERJA DI DALAM LAYAR</p>
+    <h2 id="screens-title">Informasi yang terasa<br /><em>lebih dekat.</em></h2>
+  </div>
+
+  <div class="screen-grid">
+    {screenshots.map((screenshot) => (
+      <figure class="screen-card">
+        <div class="screen-frame">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <small>localhost/SelarasKerja</small>
+          </div>
+          <img src={screenshot.image} alt={screenshot.alt} />
+        </div>
+        <figcaption>
+          <b>{screenshot.number}</b>
+          <div>
+            <strong>{screenshot.title}</strong>
+            <p>{screenshot.description}</p>
+          </div>
+        </figcaption>
+      </figure>
+    ))}
+  </div>
+
+  <p class="image-note">
+    Tangkapan layar dari website SelarasKerja. Data pribadi demo pada gambar telah disamarkan.
+  </p>
+</section>
